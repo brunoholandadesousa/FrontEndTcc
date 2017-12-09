@@ -6,34 +6,32 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <button ion-button block (click)="ionViewDidEnter()">Lista</button>
-
-  <ion-list>
-      <ion-item-sliding *ngFor="let user of users">
-        
-        <ion-item >         
-          <h2>position</h2>
-        </ion-item>
-   
-        <ion-item-options side="left">
-          <button ion-button color="primary" >
-              <ion-icon name="create"></ion-icon>
-             
-            </button>
-          <button ion-button color="danger" (click)="deleteUser(user)">
-              <ion-icon name="trash"></ion-icon>
-              Excluir
-            </button>
-        </ion-item-options>
-      </ion-item-sliding>
-   
-    </ion-list>
-   
-    <ion-infinite-scroll (ionInfinite)="getUsers($event)">
-      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Aguarde...">
-      </ion-infinite-scroll-content>
-    </ion-infinite-scroll>
-   
-    
+<ion-content padding> 
+  <ion-card>
+      <ion-item>
+          <ion-avatar item-start>
+            <img src="../assets/images/bruno.png">
+          </ion-avatar>
+          <h2>Desenvolvido por:</h2>
+          <h3>Bruno Holanda de Sousa</h3>
+          <p>Dezembro 12, 2017</p>
+        </ion-item>       
+        <ion-card-content>
+          <p>Projeto desenvolvido como trabalho de conclusão de curso pela Faculdade FASAM, do curso de SISTEMAS DE INFORMAÇÃO.</p>
+        </ion-card-content>       
+  </ion-card>
+  <ion-card>
+    <ion-item>
+        <ion-avatar item-start>
+          <img src="../assets/images/everton.png">
+        </ion-avatar>
+        <h2>Orientado por:</h2>
+        <h3>Everton Lima Aleixo</h3>
+        <p>Dezembro 12, 2017</p>
+      </ion-item>   
+      <ion-card-content>
+        <p>Mestre em CIÊNCIAS DA COMPUTAÇÃO pela Universidade Federal de Goiás.</p>
+      </ion-card-content>       
+</ion-card>
+ 
 </ion-content>

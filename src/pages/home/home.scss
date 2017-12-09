@@ -7,4 +7,10 @@ page-home {
         height: 100%;   
         width: 100%;
     }
+    ion-card {
+        max-height: 100px;
+        overflow: scroll;
+        position: absolute;
+        z-index: 1;
+    }
 }

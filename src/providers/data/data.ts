@@ -1,38 +1,36 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
+import 'rxjs/add/operator/toPromise' 
 
 @Injectable()
 export class DataProvider {
 
-  
-
   constructor(public http: Http) {
-    
+
   }
 
-  getRemoteData(){
-    this.http.get('https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot').map(res => res.json()).subscribe(data =>{
-      console.log(data);      
-    })
+  async getRemoteData() {
+    //http://localhost:5000/cliente/listarTodos
+    let pro = this.http.get('https://ghastly-vampire-21887.herokuapp.com/cliente/listarTodos')
+      .map(res => res.json())
+      .toPromise();
+
+    let result = await pro
+    console.log(result[0]);
+    return result[0];
   }  
-
-  getLocalData(){
-    this.http.get('assets/data/markers.json').map(res => res.json()).subscribe(data =>{
-      console.log(data);      
-    })
-  }
-
- 
- 
-
-  
-
-
  
 
 
- 
+
+
+
+
+
+
+
+
+
 
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 
 
@@ -8,26 +8,11 @@ import { DataProvider } from '../../providers/data/data';
   templateUrl: 'about.html'
 })
 export class AboutPage {
+ 
 
-  users: any[];
-  page: number;
-
-  constructor(public navCtrl: NavController, public dataService: DataProvider,
-    public navParams: NavParams, private toast: ToastController) {
+  constructor(public navCtrl: NavController, public dataService: DataProvider) {
 
   }
 
-  ionViewDidLoad() {
-    this.dataService.getRemoteData();
-    //this.dataService.getLocalData();
-  }
-
-  /*  ionViewDidEnter(){
-     this.dataService.getRemoteData();
-     this.users = [];
-     this.page = 1;
-    // this.getAllUsers(this.page);
-   } */
-
-
+  
 }
