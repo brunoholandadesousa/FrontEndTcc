@@ -11,8 +11,9 @@ export class DataProvider {
   }
 
   async getRemoteData() {
-    //http://localhost:5000/cliente/listarTodos
-    let pro = this.http.get('https://ghastly-vampire-21887.herokuapp.com/cliente/listarTodos')
+    
+    //https://ghastly-vampire-21887.herokuapp.com/cliente/listarTodos
+    let pro = this.http.get('http://localhost:5000/cliente/listarTodos')
       .map(res => res.json())
       .toPromise();
 

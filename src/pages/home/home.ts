@@ -36,7 +36,7 @@ export class HomePage {
     pos.then (data => {
       console.log(data.lt, data.lg);
       
-      var latLng = new google.maps.LatLng(data.latitude, data.longitude);
+      var latLng = new google.maps.LatLng(data.lt, data.lg);
       let mapOptions = {
         center:latLng,
         zoom: 15,
