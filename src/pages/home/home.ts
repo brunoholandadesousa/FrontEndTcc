@@ -34,7 +34,7 @@ export class HomePage {
     let thiz = this;
     
     pos.then (data => {
-      console.log(data.latitude, data.longitude);
+      console.log(data.lt, data.lg);
       
       var latLng = new google.maps.LatLng(data.latitude, data.longitude);
       let mapOptions = {
